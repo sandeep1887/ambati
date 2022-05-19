@@ -1,0 +1,9 @@
+---
+- name: updating yum
+  hosts: 10.95.3.125
+  become: yes
+  tasks:
+  - name: yum updating
+    yum:
+      name: "*"
+      state: latest                
