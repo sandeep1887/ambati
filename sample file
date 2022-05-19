@@ -1,0 +1,11 @@
+---
+- name: creating a file
+  hosts: 10.95.3.125
+  tasks:
+  - name: sample file
+    file:
+      path: /tmp/sample123.txt
+      owner: root
+      group: root
+      mode: 0644
+      state: touch
