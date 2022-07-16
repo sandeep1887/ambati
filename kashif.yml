@@ -1,0 +1,13 @@
+---
+- name: installing the httpd packages
+  hosts: "*"
+  become: true
+  tasks:
+  - name: yum upgrade httpd
+    yum:
+      name: "*"
+      state: latest
+  - name: start the httpd services
+      service: start
+      
+      
