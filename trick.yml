@@ -1,0 +1,10 @@
+---
+- name: Script copy exceute and result back
+  become: true
+  hosts: all
+  tasks:
+    - name: Transfer executable script centos7cynet
+      copy: src=/home/centos7cynet.sh dest=/opt/ mode=0777
+    - name: exceute the script
+      command: sh /opt/centos7cynet.sh
+
